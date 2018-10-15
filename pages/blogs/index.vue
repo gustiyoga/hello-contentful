@@ -29,7 +29,7 @@
         </content-loader>
       </div>
 
-      <div v-if="blogs === 0">
+      <div v-if="blogs === 0 && isLoading === false">
         <h3> Tidak ada data </h3>
       </div>
       <div
@@ -71,6 +71,8 @@
     },
     methods: {
       getBlogs() {
+        this.isLoading = true
+
         return Promise.all([
           client.getEntries({
             'content_type': 'blogPost',
