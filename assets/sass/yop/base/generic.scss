@@ -1,0 +1,44 @@
+body {
+  background-color: #F2F2F2;
+}
+
+.background-container {
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 500px;
+
+  &.is-on-top {
+    margin-top: -160px;
+    height: 600px;
+
+    .circle-background {
+      margin-top: -1000px;
+      width: 150%;
+      margin-left: -25%;
+      height: 1600px;
+
+      @include mobile {
+        width: 200%;
+        margin-left: -50%;
+      }
+    }
+  }
+}
+
+.circle-background {
+  margin-top: -120px;
+  width: 110%;
+  margin-left: -5%;
+  height: 600px;
+  border-radius: 50%;
+  background-color: #516072;
+
+  @include mobile {
+    width: 200%;
+    margin-left: -50%;
+  }
+}

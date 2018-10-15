@@ -1,0 +1,16 @@
+.is-borderless {
+  border-color: transparent !important;
+}
+
+.is-relative {
+  position: relative;
+}
+
+.is-cursor {
+  cursor: pointer;
+}
+
+.is-horizontal-center {
+  display: flex;
+  align-items: center !important;
+}

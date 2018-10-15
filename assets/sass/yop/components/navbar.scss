@@ -1,0 +1,75 @@
+$goyur-navbar-search-input-background: #DCE0E8 !default;
+$goyur-navbar-search-icon: #505f71 !default;
+$goyur-navbar-reservation-arrow: #516072 !default;
+
+.navbar {
+  &.is-shadow {
+    box-shadow: 0 0px 10px rgba(10, 10, 10, 0.2);
+  }
+}
+
+.navbar-search {
+  margin-top: 8px;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  z-index: 30;
+
+  .field {
+    width: 100%;
+  }
+
+  .input {
+    background-color: $goyur-navbar-search-input-background;
+    box-shadow: none;
+    border-color: transparent;
+  }
+
+  span {
+    color: $goyur-navbar-search-icon !important;
+  }
+
+  ::placeholder {
+    text-align: center;
+  }
+
+  // ::-webkit-input-placeholder {
+  //     text-align: center;
+  // } 
+  // :-moz-placeholder { /* Firefox 18- */
+  //     text-align: center;  
+  // }
+  // ::-moz-placeholder {  /* Firefox 19+ */
+  //     text-align: center;  
+  // }
+  // :-ms-input-placeholder {  
+  //     text-align: center; 
+  // }
+}
+
+.navbar-reservation {
+  background-color: $white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  & > div {
+    padding-right: 25px;
+  }
+
+  .arrow-down {
+    position: absolute;
+    top: 9px;
+    left: 274px;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 15px solid $goyur-navbar-reservation-arrow;
+  }
+}
